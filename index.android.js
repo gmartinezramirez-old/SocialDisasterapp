@@ -1,8 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
 
 import React, {Component} from 'react';
 import {
@@ -15,15 +10,11 @@ import {
 import Login from './Login'
 
 const FBSDK = require('react-native-fbsdk');
-//const FBSDKCore = require('react-native-fbsdkcore');
+
 const {
   LoginButton,
   AccessToken
 } = FBSDK;
-
-//const {
-//  AccessToken
-//} = FBSDKCore;
 
 export default class SocialDisasters extends Component {
   
