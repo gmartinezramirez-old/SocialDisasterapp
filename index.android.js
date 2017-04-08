@@ -15,13 +15,19 @@ import {
 import Login from './Login'
 
 const FBSDK = require('react-native-fbsdk');
+//const FBSDKCore = require('react-native-fbsdkcore');
 const {
   LoginButton,
-  GraphRequest,
-  GraphRequestManager
+  AccessToken
 } = FBSDK;
 
+//const {
+//  AccessToken
+//} = FBSDKCore;
+
 export default class SocialDisasters extends Component {
+  
+
   render() {
     return (
       <View>
@@ -35,7 +41,11 @@ export default class SocialDisasters extends Component {
               } else if (result.isCancelled) {
                 alert("Login was cancelled");
               } else {
-                alert("Login was successful with permissions: " + result.grantedPermissions)
+                AccessToken.getCurrentAccessToken().then(
+                  (data) => {
+                    alert(data.accessToken.toString())
+                  }
+                )
               }
             }
           }
@@ -44,5 +54,8 @@ export default class SocialDisasters extends Component {
     );
   }
 }
+
+
+
 
 AppRegistry.registerComponent('SocialDisasters', () => SocialDisasters);
