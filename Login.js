@@ -1,3 +1,5 @@
+import React, {Component} from 'react';
+
 const FBSDK = require('react-native-fbsdk');
 const {
   LoginButton,
