@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.SocialDisaster.MainActivity;
 import com.facebook.react.bridge.NativeModule;
 import com.facebook.react.bridge.ReactApplicationContext; 
 import com.facebook.react.bridge.ReactContext; 
