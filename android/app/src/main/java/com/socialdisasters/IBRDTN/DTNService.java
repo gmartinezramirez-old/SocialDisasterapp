@@ -28,9 +28,9 @@ public class DTNService  extends DTNIntentService{
 
 
 	// enviar mensaje
-	public static final String ACTION_SEND_MESSAGE = "com.SocialDisaster.SEND_MESSAGE";
+	public static final String ACTION_SEND_MESSAGE = "com.socialdisasters.SEND_MESSAGE";
 	// recibir mensaje
-	public static final String ACTION_RECV_MESSAGE = "com.SocialDisaster.RECV_MESSAGE";
+	public static final String ACTION_RECV_MESSAGE = "com.socialdisasters.RECV_MESSAGE";
 
 
 	private static final String ACTION_MARK_DELIVERED = "de.tubs.ibr.dtn.example.DELIVERED";
@@ -39,7 +39,7 @@ public class DTNService  extends DTNIntentService{
 	public static final String EXTRA_SOURCE = "de.tubs.ibr.dtn.example.SOURCE";
 	public static final String EXTRA_DESTINATION = "de.tubs.ibr.dtn.example.DESTINATION";
 	public static final String EXTRA_PAYLOAD = "de.tubs.ibr.dtn.example.PAYLOAD";
-	public static final GroupEndpoint PRESENCE_GROUP = new GroupEndpoint("dtn://socialdisaster.dtn/presence");
+	public static final GroupEndpoint PRESENCE_GROUP = new GroupEndpoint("dtn://socialdisasters.dtn/presence");
 
 	public DTNService() {
 		super(TAG);
@@ -49,7 +49,7 @@ public class DTNService  extends DTNIntentService{
     public void onCreate(){
 		super.onCreate();
 		Log.d(TAG, "Oncreate");
-		Registration reg = new Registration("SocialDisaster");
+		Registration reg = new Registration("socialdisasters");
 		//reg.add(PRESENCE_GROUP);
 		try {
 			initialize(reg);
