@@ -26,8 +26,12 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
                 <action android:name="de.tubs.ibr.dtn.intent.DTNAPP" />
                 <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
                 <action android:name="com.socialdisasters.SEND_MESSAGE" />
                 <action android:name="com.socialdisasters.RECV_MESSAGE" />
                 <action android:name="de.tubs.ibr.dtn.Intent.RECEIVE" />
@@ -50,6 +54,8 @@
             <intent-filter>
                 <action android:name="de.tubs.ibr.dtn.intent.RECEIVE" />
                 <category android:name="com.socialdisasters" />
+            <intent-filter>
+            </intent-filter>
                 <action android:name="de.tubs.ibr.dtn.intent.STATUS_REPORT" />
                 <category android:name="com.socialdisasters" />
             </intent-filter>
@@ -65,8 +71,12 @@
             <intent-filter>
                 <action android:name="de.tubs.ibr.dtn.intent.RECEIVE" />
                 <category android:name="com.socialdisasters" />
+            </intent-filter>
+            <intent-filter>
                 <action android:name="de.tubs.ibr.dtn.intent.STATUS_REPORT" />
                 <category android:name="com.socialdisasters" />
+            </intent-filter>
+            <intent-filter>
                 <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
