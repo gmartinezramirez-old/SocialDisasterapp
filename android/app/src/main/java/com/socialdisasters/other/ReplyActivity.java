@@ -25,7 +25,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.RemoteInput;
-import com.socialdisasters.other.other.service.ChatService;
+import com.socialdisasters.other.service.ChatService;
 
 public class ReplyActivity extends Activity {
 

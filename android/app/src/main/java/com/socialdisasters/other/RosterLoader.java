@@ -10,8 +10,8 @@ import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.database.Cursor;
 import android.preference.PreferenceManager;
 import android.support.v4.content.AsyncTaskLoader;
-import com.socialdisasters.other.other.core.Roster;
-import com.socialdisasters.other.other.service.ChatService;
+import com.socialdisasters.other.core.Roster;
+import com.socialdisasters.other.service.ChatService;
 
 @SuppressLint("SimpleDateFormat")
 public class RosterLoader extends AsyncTaskLoader<Cursor> {

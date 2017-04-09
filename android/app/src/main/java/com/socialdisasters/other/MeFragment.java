@@ -28,7 +28,7 @@ import de.tubs.ibr.dtn.SecurityService;
 import de.tubs.ibr.dtn.SecurityUtils;
 import de.tubs.ibr.dtn.Services;
 import de.tubs.ibr.dtn.api.ServiceNotAvailableException;
-import com.socialdisasters.other.other.service.ChatService;
+import com.socialdisasters.other.service.ChatService;
 
 public class MeFragment extends Fragment implements View.OnClickListener {
 	

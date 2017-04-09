@@ -19,7 +19,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
-package com.socialdisasters.other.other.service;
+package com.socialdisasters.other.service;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -64,13 +64,13 @@ import de.tubs.ibr.dtn.api.ServiceNotAvailableException;
 import de.tubs.ibr.dtn.api.SessionDestroyedException;
 import de.tubs.ibr.dtn.api.SingletonEndpoint;
 import de.tubs.ibr.dtn.api.TransferMode;
-import com.socialdisasters.other.other.MainActivity;
-import com.socialdisasters.other.other.R;
-import com.socialdisasters.other.other.ReplyActivity;
-import com.socialdisasters.other.other.RosterAdapter;
-import com.socialdisasters.other.other.core.Buddy;
-import com.socialdisasters.other.other.core.Message;
-import com.socialdisasters.other.other.core.Roster;
+import com.socialdisasters.other.MainActivity;
+import com.socialdisasters.R;
+import com.socialdisasters.other.ReplyActivity;
+import com.socialdisasters.other.RosterAdapter;
+import com.socialdisasters.other.core.Buddy;
+import com.socialdisasters.other.core.Message;
+import com.socialdisasters.other.core.Roster;
 
 public class ChatService extends DTNIntentService {
 	
@@ -83,27 +83,27 @@ public class ChatService extends DTNIntentService {
 	
 	private static final String TAG = "ChatService";
 	
-	public static final String EXTRA_BUDDY_ID = "com.socialdisasters.other.other.BUDDY_ID";
-	public static final String EXTRA_TEXT_BODY = "com.socialdisasters.other.other.TEXT_BODY";
-	public static final String EXTRA_DISPLAY_NAME = "com.socialdisasters.other.other.DISPLAY_NAME";
-	public static final String EXTRA_PRESENCE = "com.socialdisasters.other.other.EXTRA_PRESENCE";
-	public static final String EXTRA_STATUS = "com.socialdisasters.other.other.EXTRA_STATUS";
+	public static final String EXTRA_BUDDY_ID = "com.socialdisasters.other.BUDDY_ID";
+	public static final String EXTRA_TEXT_BODY = "com.socialdisasters.other.TEXT_BODY";
+	public static final String EXTRA_DISPLAY_NAME = "com.socialdisasters.other.DISPLAY_NAME";
+	public static final String EXTRA_PRESENCE = "com.socialdisasters.other.EXTRA_PRESENCE";
+	public static final String EXTRA_STATUS = "com.socialdisasters.other.EXTRA_STATUS";
 	public static final String EXTRA_VOICE_REPLY = "extra_voice_reply";
 	
 	// mark a specific bundle as delivered
-	public static final String MARK_DELIVERED_INTENT = "com.socialdisasters.other.other.MARK_DELIVERED";
-	public static final String REPORT_DELIVERED_INTENT = "com.socialdisasters.other.other.REPORT_DELIVERED";
+	public static final String MARK_DELIVERED_INTENT = "com.socialdisasters.other.MARK_DELIVERED";
+	public static final String REPORT_DELIVERED_INTENT = "com.socialdisasters.other.REPORT_DELIVERED";
 	
-	public static final String ACTION_NEW_MESSAGE = "com.socialdisasters.other.other.ACTION_NEW_MESSAGE";
-	public static final String ACTION_PRESENCE_ALARM = "com.socialdisasters.other.other.PRESENCE_ALARM";
-	public static final String ACTION_SEND_MESSAGE = "com.socialdisasters.other.other.SEND_MESSAGE";
-	public static final String ACTION_REFRESH_PRESENCE = "com.socialdisasters.other.other.REFRESH_PRESENCE";
-	public static final String ACTION_USERINFO_UPDATED = "com.socialdisasters.other.other.USERINFO_UPDATED";
+	public static final String ACTION_NEW_MESSAGE = "com.socialdisasters.other.ACTION_NEW_MESSAGE";
+	public static final String ACTION_PRESENCE_ALARM = "com.socialdisasters.other.PRESENCE_ALARM";
+	public static final String ACTION_SEND_MESSAGE = "com.socialdisasters.other.SEND_MESSAGE";
+	public static final String ACTION_REFRESH_PRESENCE = "com.socialdisasters.other.REFRESH_PRESENCE";
+	public static final String ACTION_USERINFO_UPDATED = "com.socialdisasters.other.USERINFO_UPDATED";
 	
 	private static final int MESSAGE_NOTIFICATION = 1;
 	private static final int REFRESH_BUDDY_DATA = 2;
 	
-	public static final String ACTION_OPENCHAT = "com.socialdisasters.other.other.OPENCHAT";
+	public static final String ACTION_OPENCHAT = "com.socialdisasters.other.OPENCHAT";
 	public static final GroupEndpoint PRESENCE_GROUP_EID = new GroupEndpoint("dtn://chat.dtn/presence");
 	
 	private ServiceError _service_error = ServiceError.NO_ERROR;

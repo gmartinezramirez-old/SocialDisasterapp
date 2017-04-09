@@ -19,7 +19,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
-package com.socialdisasters.other.other.core;
+package com.socialdisasters.other.core;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -37,14 +37,14 @@ import android.provider.BaseColumns;
 import android.util.Log;
 import de.tubs.ibr.dtn.api.BundleID;
 import de.tubs.ibr.dtn.api.SingletonEndpoint;
-import com.socialdisasters.other.other.MessageAdapter;
-import com.socialdisasters.other.other.RosterAdapter;
-import com.socialdisasters.other.other.service.ChatService;
+import com.socialdisasters.other.MessageAdapter;
+import com.socialdisasters.other.RosterAdapter;
+import com.socialdisasters.other.service.ChatService;
 
 @SuppressLint("SimpleDateFormat")
 public class Roster {
 	
-	public final static String NOTIFY_ROSTER_CHANGED = "com.socialdisasters.other.other.NOTIFY_ROSTER_CHANGED";
+	public final static String NOTIFY_ROSTER_CHANGED = "com.socialdisasters.other.NOTIFY_ROSTER_CHANGED";
 	
 	private final String TAG = "Roster";
 	

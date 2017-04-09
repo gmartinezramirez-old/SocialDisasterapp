@@ -1,6 +1,6 @@
 package com.socialdisasters.other;
 
-import com.socialdisasters.other.other.service.ChatService;
+import com.socialdisasters.other.service.ChatService;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;

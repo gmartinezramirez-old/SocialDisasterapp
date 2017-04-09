@@ -19,7 +19,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
-package com.socialdisasters.other.other.service;
+package com.socialdisasters.other.service;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;

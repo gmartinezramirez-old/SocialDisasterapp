@@ -7,9 +7,9 @@ import android.content.IntentFilter;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v4.content.AsyncTaskLoader;
-import com.socialdisasters.other.other.core.Message;
-import com.socialdisasters.other.other.core.Roster;
-import com.socialdisasters.other.other.service.ChatService;
+import com.socialdisasters.other.core.Message;
+import com.socialdisasters.other.core.Roster;
+import com.socialdisasters.other.service.ChatService;
 
 public class MessageListLoader extends AsyncTaskLoader<Cursor> {
 	

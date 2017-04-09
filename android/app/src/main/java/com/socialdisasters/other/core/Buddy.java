@@ -19,7 +19,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
-package com.socialdisasters.other.other.core;
+package com.socialdisasters.other.core;
 
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -31,7 +31,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.provider.BaseColumns;
 import android.util.Log;
-import com.socialdisasters.other.other.RosterAdapter;
+import com.socialdisasters.other.RosterAdapter;
 
 public class Buddy implements Comparable<Buddy> {
 	

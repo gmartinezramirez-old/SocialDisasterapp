@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import com.socialdisasters.other.other.core.Buddy;
+import com.socialdisasters.other.core.Buddy;
 
 public class RosterItem extends LinearLayout {
 	

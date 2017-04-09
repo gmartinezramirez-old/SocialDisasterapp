@@ -12,7 +12,7 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.TextView.OnEditorActionListener;
-import com.socialdisasters.other.other.core.Buddy;
+import com.socialdisasters.other.core.Buddy;
 
 public class MessageComposer extends LinearLayout {
 	

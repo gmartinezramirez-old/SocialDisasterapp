@@ -1,4 +1,4 @@
-package com.socialdisasters.other.other.service;
+package com.socialdisasters.other.service;
 
 import java.util.HashMap;
 import java.util.concurrent.ConcurrentLinkedQueue;
@@ -16,7 +16,7 @@ import android.util.Log;
 public class TTSService extends Service {
 	
 	private final static String TAG = "TTSService";
-	public final static String INTENT_SPEAK = "com.socialdisasters.other.other.service.INTENT_SPEAK";
+	public final static String INTENT_SPEAK = "com.socialdisasters.other.service.INTENT_SPEAK";
 	
 	private ExecutorService executor = Executors.newSingleThreadExecutor();
 	

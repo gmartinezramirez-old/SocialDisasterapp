@@ -5,9 +5,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.support.v4.content.AsyncTaskLoader;
-import com.socialdisasters.other.other.core.Buddy;
-import com.socialdisasters.other.other.core.Roster;
-import com.socialdisasters.other.other.service.ChatService;
+import com.socialdisasters.other.core.Buddy;
+import com.socialdisasters.other.core.Roster;
+import com.socialdisasters.other.service.ChatService;
 
 public class BuddyLoader extends AsyncTaskLoader<Buddy> {
 

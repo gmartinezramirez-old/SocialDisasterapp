@@ -1,4 +1,4 @@
-package com.socialdisasters.other.other.service;
+package com.socialdisasters.other.service;
 
 import java.util.List;
 
@@ -10,7 +10,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.net.Uri;
-import com.socialdisasters.other.other.R;
+import com.socialdisasters.other.R;
 
 public class Utils {
 	public static void showInstallServiceDialog(final Activity activity) {

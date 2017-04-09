@@ -1,4 +1,4 @@
-package com.socialdisasters.other.other.service;
+package com.socialdisasters.other.service;
 
 public enum ServiceError {
 	SERVICE_NOT_FOUND,

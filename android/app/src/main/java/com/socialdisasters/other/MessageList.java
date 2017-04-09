@@ -8,7 +8,7 @@ import android.support.v4.content.Loader;
 import android.support.v4.widget.CursorAdapter;
 import android.util.AttributeSet;
 import android.widget.ListView;
-import com.socialdisasters.other.other.service.ChatService;
+import com.socialdisasters.other.service.ChatService;
 
 public class MessageList extends ListView implements
 	LoaderManager.LoaderCallbacks<Cursor> {
