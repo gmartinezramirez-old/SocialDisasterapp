@@ -21,8 +21,8 @@ import de.tubs.ibr.dtn.api.SingletonEndpoint;
 
 public class DTNService  extends DTNIntentService{
 	private static final String TAG = "DTNService";
-	public static final String EXTRA_ID_USER = "USER_ID" ;
-	public static final String EXTRA_TEXT_USER = "TEXT_ID" ;
+	public static final String EXTRA_USER_ID = "USER_ID" ;
+	public static final String EXTRA_TEXT_USER = "TEXT_BODY" ;
 	private DTNClient.Session mSession = null;
 
 
@@ -92,7 +92,7 @@ public class DTNService  extends DTNIntentService{
 			}
 		}else if(ACTION_SEND_MESSAGE.equals(action)) {
 			Log.e(TAG,"SEND MESSAGE");
-			String idUser = intent.getStringExtra(EXTRA_ID_USER);
+			String idUser = intent.getStringExtra(EXTRA_USER_ID);
 			String text = intent.getStringExtra(EXTRA_TEXT_USER);
 			actionSendMessage(idUser, text);
 		}else if(ACTION_RECV_MESSAGE.equals(action)) {

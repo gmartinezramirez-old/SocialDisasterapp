@@ -19,7 +19,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
-package com.socialdisaster.service;
+package com.socialdisasters.service;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -78,27 +78,27 @@ public class ChatService extends DTNIntentService {
 	
 	private static final String TAG = "ChatService";
 	
-	public static final String EXTRA_BUDDY_ID = "de.tubs.ibr.dtn.chat.BUDDY_ID";
-	public static final String EXTRA_TEXT_BODY = "de.tubs.ibr.dtn.chat.TEXT_BODY";
-	public static final String EXTRA_DISPLAY_NAME = "de.tubs.ibr.dtn.chat.DISPLAY_NAME";
-	public static final String EXTRA_PRESENCE = "de.tubs.ibr.dtn.chat.EXTRA_PRESENCE";
-	public static final String EXTRA_STATUS = "de.tubs.ibr.dtn.chat.EXTRA_STATUS";
+	public static final String EXTRA_USER_ID = "com.socialdisasters.USER_ID";
+	public static final String EXTRA_TEXT_BODY = "com.socialdisasters.TEXT_BODY";
+	public static final String EXTRA_DISPLAY_NAME = "com.socialdisasters.DISPLAY_NAME";
+	public static final String EXTRA_PRESENCE = "com.socialdisasters.EXTRA_PRESENCE";
+	public static final String EXTRA_STATUS = "com.socialdisasters.EXTRA_STATUS";
 	public static final String EXTRA_VOICE_REPLY = "extra_voice_reply";
 	
 	// mark a specific bundle as delivered
-	public static final String MARK_DELIVERED_INTENT = "de.tubs.ibr.dtn.chat.MARK_DELIVERED";
-	public static final String REPORT_DELIVERED_INTENT = "de.tubs.ibr.dtn.chat.REPORT_DELIVERED";
+	public static final String MARK_DELIVERED_INTENT = "com.socialdisasters.MARK_DELIVERED";
+	public static final String REPORT_DELIVERED_INTENT = "com.socialdisasters.REPORT_DELIVERED";
 	
-	public static final String ACTION_NEW_MESSAGE = "de.tubs.ibr.dtn.chat.ACTION_NEW_MESSAGE";
-	public static final String ACTION_PRESENCE_ALARM = "de.tubs.ibr.dtn.chat.PRESENCE_ALARM";
-	public static final String ACTION_SEND_MESSAGE = "de.tubs.ibr.dtn.chat.SEND_MESSAGE";
-	public static final String ACTION_REFRESH_PRESENCE = "de.tubs.ibr.dtn.chat.REFRESH_PRESENCE";
-	public static final String ACTION_USERINFO_UPDATED = "de.tubs.ibr.dtn.chat.USERINFO_UPDATED";
+	public static final String ACTION_NEW_MESSAGE = "com.socialdisasters.ACTION_NEW_MESSAGE";
+	public static final String ACTION_PRESENCE_ALARM = "com.socialdisasters.PRESENCE_ALARM";
+	public static final String ACTION_SEND_MESSAGE = "com.socialdisasters.SEND_MESSAGE";
+	public static final String ACTION_REFRESH_PRESENCE = "com.socialdisasters.REFRESH_PRESENCE";
+	public static final String ACTION_USERINFO_UPDATED = "com.socialdisasters.USERINFO_UPDATED";
 	
 	private static final int MESSAGE_NOTIFICATION = 1;
 	private static final int REFRESH_BUDDY_DATA = 2;
 	
-	public static final String ACTION_OPENCHAT = "de.tubs.ibr.dtn.chat.OPENCHAT";
+	public static final String ACTION_OPENCHAT = "com.socialdisasters.OPENCHAT";
 	public static final GroupEndpoint PRESENCE_GROUP_EID = new GroupEndpoint("dtn://chat.dtn/presence");
 	
 	private boolean _unregister_on_destroy = false;
@@ -383,20 +383,13 @@ public class ChatService extends DTNIntentService {
 		}
 		else if (ACTION_SEND_MESSAGE.equals(action))
 		{
-			Long buddyId = intent.getLongExtra(ChatService.EXTRA_BUDDY_ID, -1);
+			Long buddyId = intent.getLongExtra(ChatService.EXTRA_USER_ID, -1);
 			String text = intent.getStringExtra(ChatService.EXTRA_TEXT_BODY);
 			
 			// abort if there is no buddyId
 			if (buddyId < 0) return;
 			
 			actionSendMessage(buddyId, text);
-		}
-		else if (ACTION_REFRESH_PRESENCE.equals(action))
-		{
-			String presence = intent.getStringExtra(ChatService.EXTRA_PRESENCE);
-			String nickname = intent.getStringExtra(ChatService.EXTRA_DISPLAY_NAME);
-			String status = intent.getStringExtra(ChatService.EXTRA_STATUS);
-			
 		}
 		else if (ACTION_NEW_MESSAGE.equals(action)) {
       //aqui un nuevo mensaje!!!

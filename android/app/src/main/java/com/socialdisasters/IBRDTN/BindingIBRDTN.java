@@ -11,6 +11,7 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 
 import com.socialdisasters.IBRDTN.DTNService;
+import com.socialdisasters.service.ChatService;
 import com.facebook.react.shell.MainPackageConfig;
 
 import java.util.HashMap;
@@ -21,6 +22,7 @@ import static android.R.id.message;
 public class BindingIBRDTN extends ReactContextBaseJavaModule {
 
     private static final String TAG =  "BindingDTN";
+    //private ChatService service;
     private DTNService service;
 
     private static final String DURATION_SHORT_KEY = "SHORT";
@@ -56,9 +58,15 @@ public class BindingIBRDTN extends ReactContextBaseJavaModule {
     @ReactMethod
     public void send(String dir) {
         Log.d(TAG, "SEND: " + dir);
+        //final Intent intent = new Intent(getReactApplicationContext(), ChatService.class);
+        //intent.setAction(ChatService.ACTION_SEND_MESSAGE);
+        //intent.putExtra(ChatService.EXTRA_USER_ID, dir);
+        //intent.putExtra(ChatService.EXTRA_TEXT_BODY, "HOLA");
+        //getReactApplicationContext().startService(intent);
+
         final Intent intent = new Intent(getReactApplicationContext(), DTNService.class);
         intent.setAction(DTNService.ACTION_SEND_MESSAGE);
-        intent.putExtra(DTNService.EXTRA_ID_USER, dir);
+        intent.putExtra(DTNService.EXTRA_USER_ID, dir);
         intent.putExtra(DTNService.EXTRA_TEXT_USER, "HOLA");
         getReactApplicationContext().startService(intent);
     }

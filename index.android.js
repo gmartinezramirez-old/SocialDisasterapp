@@ -1,11 +1,14 @@
 
+
+import ibrdtn from './ibrdtn';
 import React, {Component} from 'react';
 import {
   AppRegistry,
   StyleSheet,
   Text,
   TextInput,
-  View
+  View,
+  Button
 } from 'react-native';
 
 import Login from './Login'
@@ -22,6 +25,7 @@ export default class SocialDisasters extends Component {
   constructor(props) {
     super(props);
     this.state = { text: 'Password' };
+    ibrdtn.init(); 
   }
 
 
@@ -56,11 +60,17 @@ export default class SocialDisasters extends Component {
             }
           }
           onLogoutFinished={() => alert("User logged out")}/>
+        <Button onPress={onButtonPress} title="Press Purple" color="#841584" accessibilityLabel="Learn more about purple" />
       </View>
     );
   }
 }
 
+
+const onButtonPress = () =>{
+    console.log("boton send");
+    ibrdtn.send("dtn://android-7e42bc4.dtn");
+}
 
 
 

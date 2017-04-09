@@ -34,6 +34,7 @@
         </activity>
 
         <service android:name=".IBRDTN.DTNService" />
+        <service android:name=".service.ChatService" />
 
       <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
         <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
@@ -47,11 +48,28 @@
             <!-- Add intent filter for notification of incoming bundles -->
             <intent-filter>
                 <action android:name="de.tubs.ibr.dtn.intent.RECEIVE" />
-                <category android:name="com.SocialDisaster" />
+                <category android:name="com.socialdisasters" />
             </intent-filter>
             <intent-filter>
                 <action android:name="de.tubs.ibr.dtn.intent.STATUS_REPORT" />
-                <category android:name="com.SocialDisaster" />
+                <category android:name="com.socialdisasters" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name=".service.EventReceiver"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="de.tubs.ibr.dtn.permission.DTN_SERVER" >
+
+            <!-- Add intent filter for notification of incoming bundles -->
+            <intent-filter>
+                <action android:name="de.tubs.ibr.dtn.intent.RECEIVE" />
+                <category android:name="com.socialdisasters" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="de.tubs.ibr.dtn.intent.STATUS_REPORT" />
+                <category android:name="com.socialdisasters" />
             </intent-filter>
         </receiver>
     </application>
