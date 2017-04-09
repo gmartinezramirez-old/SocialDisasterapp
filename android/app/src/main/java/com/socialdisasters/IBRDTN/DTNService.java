@@ -1,4 +1,4 @@
-package com.SocialDisaster.IBRDTN;
+package com.socialdisasters.IBRDTN;
 
 import android.content.Intent;
 import android.util.Log;

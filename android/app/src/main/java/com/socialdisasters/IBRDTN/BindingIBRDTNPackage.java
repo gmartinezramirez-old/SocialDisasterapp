@@ -1,4 +1,4 @@
-package com.SocialDisaster.IBRDTN;
+package com.socialdisasters.IBRDTN;
 
 import com.facebook.react.ReactPackage;
 import com.facebook.react.bridge.JavaScriptModule;

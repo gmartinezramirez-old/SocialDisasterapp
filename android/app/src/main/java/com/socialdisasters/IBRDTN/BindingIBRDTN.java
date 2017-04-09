@@ -1,4 +1,4 @@
-package com.SocialDisaster.IBRDTN;
+package com.socialdisasters.IBRDTN;
 
 import android.content.Intent;
 import android.util.Log;
@@ -10,7 +10,7 @@ import com.facebook.react.bridge.ReactContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule; 
 import com.facebook.react.bridge.ReactMethod;
 
-import com.SocialDisaster.IBRDTN.DTNService;
+import com.socialdisasters.IBRDTN.DTNService;
 import com.facebook.react.shell.MainPackageConfig;
 
 import java.util.HashMap;
