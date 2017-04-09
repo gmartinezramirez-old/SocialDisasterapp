@@ -34,7 +34,8 @@
             <intent-filter>
                 <action android:name="com.socialdisasters.SEND_MESSAGE" />
                 <action android:name="com.socialdisasters.RECV_MESSAGE" />
-                <action android:name="de.tubs.ibr.dtn.Intent.RECEIVE" />
+                <action android:name="de.tubs.ibr.dtn.intent.RECEIVE" />
+                <category android:name="com.socialdisasters" />
             </intent-filter>
         </activity>
 
