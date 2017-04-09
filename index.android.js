@@ -11,7 +11,11 @@ import {
   Button
 } from 'react-native';
 
-import Login from './Login'
+import Login from './Login';
+import Contacts from './Contacts';
+import ViewChat from './ViewChat';
+
+import { StackNavigator } from 'react-navigation';
 
 const FBSDK = require('react-native-fbsdk');
 
@@ -22,14 +26,20 @@ const {
 
 export default class SocialDisasters extends Component {
   
+  static navigationOptions = {
+    title: Login,
+  };
+
   constructor(props) {
     super(props);
     this.state = { text: 'Password' };
     ibrdtn.init(); 
   }
 
-
   render() {
+
+    const { navigate } = this.props.navigation;
+
     return (
       <View>
         <Text>Welcome to the Social Disaster app!</Text>
@@ -54,6 +64,7 @@ export default class SocialDisasters extends Component {
                     var userId =data.getUserId().toString(); 
                     alert(userToken)
                     //alert(userId)
+                    navigate('Contacts');
                   }
                 )
               }
@@ -73,6 +84,10 @@ const onButtonPress = () =>{
     ibrdtn.send("dtn://android-7e424bc4.dtn");
 }
 
+const SimpleApp = StackNavigator({
+  Home: { screen: SocialDisasters},
+  Contacts: { screen: Contacts},
+  Chat: {screen: ViewChat}
+});
 
-
-AppRegistry.registerComponent('SocialDisasters', () => SocialDisasters);
+AppRegistry.registerComponent('SocialDisasters', () => SimpleApp);
