@@ -10,7 +10,8 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.net.Uri;
-import com.socialdisasters.other.R;
+
+import com.socialdisasters.R;
 
 public class Utils {
 	public static void showInstallServiceDialog(final Activity activity) {

@@ -23,6 +23,8 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.AdapterContextMenuInfo;
 import android.widget.ListView;
+
+import com.socialdisasters.R;
 import com.socialdisasters.other.service.ChatService;
 import com.socialdisasters.other.service.Utils;
 
