@@ -60,10 +60,12 @@
             android:permission="de.tubs.ibr.dtn.permission.DTN_SERVER" >
 
             <!-- Add intent filter for notification of incoming bundles -->
+
             <intent-filter>
                 <action android:name="de.tubs.ibr.dtn.intent.RECEIVE" />
                 <category android:name="com.socialdisasters" />
             </intent-filter>
+
             <intent-filter>
                 <action android:name="de.tubs.ibr.dtn.intent.STATUS_REPORT" />
                 <category android:name="com.socialdisasters" />
@@ -88,10 +90,6 @@
             <intent-filter>
                 <action android:name="de.tubs.ibr.dtn.intent.STATUS_REPORT" />
                 <category android:name="com.socialdisasters" />
-            </intent-filter>
-            <intent-filter>
-                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
     </application>
