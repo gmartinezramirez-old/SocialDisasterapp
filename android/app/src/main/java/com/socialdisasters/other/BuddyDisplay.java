@@ -8,8 +8,8 @@ import android.util.AttributeSet;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import com.socialdisasters.other.other.core.Buddy;
-import com.socialdisasters.other.other.service.ChatService;
+import com.socialdisasters.other.core.Buddy;
+import com.socialdisasters.other.service.ChatService;
 
 public class BuddyDisplay extends LinearLayout implements
 	LoaderManager.LoaderCallbacks<Buddy> {
