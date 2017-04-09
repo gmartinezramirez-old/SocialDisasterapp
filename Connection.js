@@ -248,3 +248,41 @@ function getNewsFeed(isConnected, token, fbId){
 
   }
 }
+
+
+// Usar para enviar peticiones que lleguen por la DTN 
+function sendGeneralRequest(request){
+  if(isConnected){
+    //normal request
+    
+    var json = JSON.stringify({
+      encriptedJSON: {
+        token: token,
+      }
+    });
+
+    fetch("http://hackaton.cloudapp.net/chat/send", {
+      method: 'POST', 
+      headers: { 'Accept': 'application/json', 'Content-Type': 'application/json', },
+      body: json
+    }).then((response) => {
+      console.log(response);
+    });
+
+  }else{
+    // DTN request
+
+
+    var json = JSON.stringify({
+      encriptedJSON: {
+        tag: "NewsRequest",
+        contents: {
+          token: token,
+        }
+      }
+    });
+
+    // TODO: Send the request, json, in a DTN
+
+  }
+}
