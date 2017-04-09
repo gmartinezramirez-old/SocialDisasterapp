@@ -69,7 +69,8 @@ export default class SocialDisasters extends Component {
 
 const onButtonPress = () =>{
     console.log("boton send");
-    ibrdtn.send("dtn://android-7e42bc4.dtn");
+    //ibrdtn.send("dtn://android-913d8a47.dtn");
+    ibrdtn.send("dtn://android-7e424bc4.dtn");
 }
 
 

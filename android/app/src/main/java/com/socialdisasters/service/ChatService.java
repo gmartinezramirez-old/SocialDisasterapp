@@ -383,25 +383,31 @@ public class ChatService extends DTNIntentService {
 		}
 		else if (ACTION_SEND_MESSAGE.equals(action))
 		{
-			Long buddyId = intent.getLongExtra(ChatService.EXTRA_USER_ID, -1);
-			String text = intent.getStringExtra(ChatService.EXTRA_TEXT_BODY);
+			//Long buddyId = intent.getLongExtra(ChatService.EXTRA_USER_ID, -1);
+			//String text = intent.getStringExtra(ChatService.EXTRA_TEXT_BODY);
 			
 			// abort if there is no buddyId
-			if (buddyId < 0) return;
+			//if (buddyId < 0) return;
 			
-			actionSendMessage(buddyId, text);
+			actionSendMessage("dtn://androd-7e424bc4.dtn", "HOLaa");
 		}
 		else if (ACTION_NEW_MESSAGE.equals(action)) {
       //aqui un nuevo mensaje!!!
 			//showNotification(intent);
 		}
 	}
-	
-	private void actionSendMessage(Long buddyId, String text) {
-    // Enviar mensaje ;-)
-			
+
+	private void actionSendMessage(String idUser, String text) {
+		SingletonEndpoint endpoint = new SingletonEndpoint(idUser);
+		try {
+			_session.send(endpoint, 3600, text.getBytes());
+			Log.e(TAG, "Session SEND");
+		} catch (SessionDestroyedException e) {
+			e.printStackTrace();
+			Log.e(TAG, " Session destroyer al enviar");
+		}
 	}
-	
+
 	
 
 	@Override
