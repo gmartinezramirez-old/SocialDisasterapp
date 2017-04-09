@@ -4,6 +4,7 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
+  TextInput,
   View
 } from 'react-native';
 
@@ -18,11 +19,21 @@ const {
 
 export default class SocialDisasters extends Component {
   
+  constructor(props) {
+    super(props);
+    this.state = { text: 'Password' };
+  }
+
 
   render() {
     return (
       <View>
-        <Text>Welcome to the Facebook SDK for React Native!</Text>
+        <Text>Welcome to the Social Disaster app!</Text>
+        <TextInput
+        style={{height: 40, borderColor: 'gray', borderWidth: 1}}
+        onChangeText={(text) => this.setState({text})}
+        value={this.state.text}
+        />
         <LoginButton
           publishPermissions={["publish_actions"]}
           onLoginFinished={
@@ -32,9 +43,13 @@ export default class SocialDisasters extends Component {
               } else if (result.isCancelled) {
                 alert("Login was cancelled");
               } else {
+                // obtain access token
                 AccessToken.getCurrentAccessToken().then(
                   (data) => {
-                    alert(data.accessToken.toString())
+                    var userToken=data.accessToken.toString();
+                    var userId =data.getUserId().toString(); 
+                    alert(userToken)
+                    //alert(userId)
                   }
                 )
               }
