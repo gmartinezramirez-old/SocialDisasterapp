@@ -94,4 +94,34 @@
         </receiver>
     </application>
 
+
+		<service android:name=".other.service.ChatService" />
+		<service android:name=".other.service.TTSService" />
+		
+	    <receiver android:enabled="true" android:name=".service.EventReceiver" android:exported="true" android:permission="de.tubs.ibr.dtn.permission.DTN_SERVER">
+	        <intent-filter>
+	            <action android:name="de.tubs.ibr.dtn.intent.RECEIVE" />
+	            <category android:name="com.socialdisasters.other" />
+	        </intent-filter>
+	        <intent-filter>
+	            <action android:name="de.tubs.ibr.dtn.intent.STATUS_REPORT" />
+	            <category android:name="com.socialdisasters.other" />
+	        </intent-filter>
+			<intent-filter>
+				<action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+			</intent-filter>
+			<intent-filter>
+				<action android:name="android.intent.action.BOOT_COMPLETED" />
+			</intent-filter>
+	    </receiver>
+	    
+	    <receiver android:enabled="true" android:name=".service.NotificationReceiver" android:exported="false">
+	        <intent-filter>
+	            <action android:name="com.socialdisasters.ACTION_NEW_MESSAGE" />
+	            <category android:name="android.intent.category.DEFAULT" />
+	        </intent-filter>
+	    </receiver>
+    </application>
+
+
 </manifest>
