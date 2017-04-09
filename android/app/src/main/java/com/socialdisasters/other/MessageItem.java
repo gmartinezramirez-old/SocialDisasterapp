@@ -7,6 +7,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import com.socialdisasters.R;
 import com.socialdisasters.other.core.Message;
 
 public class MessageItem extends RelativeLayout {

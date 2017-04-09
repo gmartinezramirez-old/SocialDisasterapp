@@ -23,6 +23,8 @@ import de.tubs.ibr.dtn.SecurityService;
 import de.tubs.ibr.dtn.SecurityUtils;
 import de.tubs.ibr.dtn.Services;
 import de.tubs.ibr.dtn.api.ServiceNotAvailableException;
+
+import com.socialdisasters.R;
 import com.socialdisasters.other.core.Buddy;
 import com.socialdisasters.other.service.ChatService;
 import com.socialdisasters.other.service.Utils;

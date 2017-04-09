@@ -24,6 +24,8 @@ package com.socialdisasters.other;
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
 
+import com.socialdisasters.R;
+
 public class Preferences extends PreferenceActivity {
 	@SuppressWarnings("deprecation")
 	@Override

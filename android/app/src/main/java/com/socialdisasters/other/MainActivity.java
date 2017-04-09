@@ -21,11 +21,19 @@
  */
 package com.socialdisasters.other;
 
+import android.app.Activity;
 import android.os.Bundle;
+import android.support.v4.BuildConfig;
 import android.support.v4.app.FragmentActivity;
 
+import com.facebook.react.ReactInstanceManager;
+import com.facebook.react.ReactRootView;
+import com.facebook.react.common.LifecycleState;
+import com.facebook.react.modules.core.DefaultHardwareBackBtnHandler;
+import com.facebook.react.shell.MainReactPackage;
+
 public class MainActivity extends Activity implements DefaultHardwareBackBtnHandler {
-   private ReactRootView mReactRootView; 
+   private ReactRootView mReactRootView;
    private ReactInstanceManager mReactInstanceManager;
 
 	@SuppressWarnings("unused")
