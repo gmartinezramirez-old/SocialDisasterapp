@@ -1,4 +1,4 @@
-package com.socialdisasters.other.other;
+package com.socialdisasters.other;
 
 import com.socialdisasters.other.other.service.ChatService;
 import android.app.AlertDialog;

@@ -1,4 +1,4 @@
-package com.socialdisasters.other.other;
+package com.socialdisasters.other;
 
 import android.app.PendingIntent;
 import android.content.BroadcastReceiver;

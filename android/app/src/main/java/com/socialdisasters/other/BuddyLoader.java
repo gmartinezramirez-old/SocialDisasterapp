@@ -1,4 +1,4 @@
-package com.socialdisasters.other.other;
+package com.socialdisasters.other;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;

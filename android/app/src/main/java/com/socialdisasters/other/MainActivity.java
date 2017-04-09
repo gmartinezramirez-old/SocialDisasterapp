@@ -19,7 +19,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
-package com.socialdisasters.other.other;
+package com.socialdisasters.other;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;

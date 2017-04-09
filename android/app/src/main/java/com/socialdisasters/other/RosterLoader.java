@@ -1,4 +1,4 @@
-package com.socialdisasters.other.other;
+package com.socialdisasters.other;
 
 import android.annotation.SuppressLint;
 import android.content.BroadcastReceiver;
