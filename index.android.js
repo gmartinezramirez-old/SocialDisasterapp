@@ -1,8 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
 
 import React, {Component} from 'react';
 import {
@@ -15,13 +10,15 @@ import {
 import Login from './Login'
 
 const FBSDK = require('react-native-fbsdk');
+
 const {
   LoginButton,
-  GraphRequest,
-  GraphRequestManager
+  AccessToken
 } = FBSDK;
 
 export default class SocialDisasters extends Component {
+  
+
   render() {
     return (
       <View>
@@ -35,7 +32,11 @@ export default class SocialDisasters extends Component {
               } else if (result.isCancelled) {
                 alert("Login was cancelled");
               } else {
-                alert("Login was successful with permissions: " + result.grantedPermissions)
+                AccessToken.getCurrentAccessToken().then(
+                  (data) => {
+                    alert(data.accessToken.toString())
+                  }
+                )
               }
             }
           }
@@ -44,5 +45,8 @@ export default class SocialDisasters extends Component {
     );
   }
 }
+
+
+
 
 AppRegistry.registerComponent('SocialDisasters', () => SocialDisasters);
