@@ -33,13 +33,21 @@
             </intent-filter>
             <intent-filter>
                 <action android:name="com.socialdisasters.SEND_MESSAGE" />
+                <category android:name="com.socialdisasters" />
+            </intent-filter>
+            <intent-filter>
                 <action android:name="com.socialdisasters.RECV_MESSAGE" />
+                <category android:name="com.socialdisasters" />
+            </intent-filter>
+
+            <intent-filter>
                 <action android:name="de.tubs.ibr.dtn.intent.RECEIVE" />
                 <category android:name="com.socialdisasters" />
             </intent-filter>
         </activity>
 
         <service android:name=".IBRDTN.DTNService" />
+        <service android:name=".IBRDTN.EventReceiver" />
         <service android:name=".service.ChatService" />
 
       <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
@@ -71,6 +79,10 @@
             <!-- Add intent filter for notification of incoming bundles -->
             <intent-filter>
                 <action android:name="de.tubs.ibr.dtn.intent.RECEIVE" />
+                <category android:name="com.socialdisasters" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.socialdisasters.RECV_MESSAGE" />
                 <category android:name="com.socialdisasters" />
             </intent-filter>
             <intent-filter>
