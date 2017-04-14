@@ -103,7 +103,7 @@ export default class SocialDisasters extends Component {
             onPress={this.onButtonPress.bind(this)} title="Send" color="#841584"
         />
         <Text style={styles.labelMessage}>
-        {"Mensaje recivido: "} {this.state.messageRecv}
+        {"Mensaje recibido: "} {this.state.messageRecv}
         </Text>
       </View>
     );
