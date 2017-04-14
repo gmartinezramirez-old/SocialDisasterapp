@@ -4,20 +4,13 @@ import android.content.Intent;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.facebook.react.bridge.NativeModule;
-import com.facebook.react.bridge.ReactApplicationContext; 
-import com.facebook.react.bridge.ReactContext; 
-import com.facebook.react.bridge.ReactContextBaseJavaModule; 
+import com.facebook.react.bridge.ReactApplicationContext;
+import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 
-import com.socialdisasters.IBRDTN.DTNService;
-import com.socialdisasters.service.ChatService;
-import com.facebook.react.shell.MainPackageConfig;
 
 import java.util.HashMap;
 import java.util.Map;
-
-import static android.R.id.message;
 
 public class BindingIBRDTN extends ReactContextBaseJavaModule {
 
@@ -59,11 +52,6 @@ public class BindingIBRDTN extends ReactContextBaseJavaModule {
     @ReactMethod
     public void send(String dir) {
         Log.d(TAG, "SEND: " + dir);
-        //final Intent intent = new Intent(getReactApplicationContext(), ChatService.class);
-        //intent.setAction(ChatService.ACTION_SEND_MESSAGE);
-        //intent.putExtra(ChatService.EXTRA_USER_ID, dir);
-        //intent.putExtra(ChatService.EXTRA_TEXT_BODY, "HOLA");
-        //getReactApplicationContext().startService(intent);
 
         final Intent intent = new Intent(getReactApplicationContext(), DTNService.class);
         intent.setAction(DTNService.ACTION_SEND_MESSAGE);
