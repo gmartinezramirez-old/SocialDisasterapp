@@ -24,7 +24,10 @@ export default class SocialDisasters extends Component {
   
   constructor(props) {
     super(props);
-    this.state = { text: 'Password' };
+    this.state = { text: 'Password' ,
+                   dtnDir: 'dtn://android-9b2cc423.dtn/socialdisasters',
+                   message: 'message'  
+                };
     ibrdtn.init(); 
   }
 
@@ -60,19 +63,43 @@ export default class SocialDisasters extends Component {
             }
           }
           onLogoutFinished={() => alert("User logged out")}/>
-        <Button onPress={onButtonPress} title="Press Purple" color="#841584" accessibilityLabel="Learn more about purple" />
+
+        <Text style={styles.textoDTN}>Dirección DTN:</Text>
+        <TextInput
+            style={styles.inputDirDTN}
+            onChangeText={(dtnDir) => this.setState({dtnDir})}
+            value={this.state.dtnDir}
+        />
+        <Button
+            style={styles.buttonSend}
+            onPress={this.onButtonPress.bind(this)} title="Send" color="#841584"
+        />
       </View>
     );
   }
+    onButtonPress() {
+        console.log("boton send");
+        let dirDtn = this.state.dtnDir;
+        let message = this.state.message;
+        ibrdtn.send(dirDtn);
+    }
 }
 
-
-const onButtonPress = () =>{
-    console.log("boton send");
-    //ibrdtn.send("dtn://android-913d8a47.dtn");
-    ibrdtn.send("dtn://android-7e424bc4.dtn");
-}
-
+const styles = StyleSheet.create({
+    inputDirDTN: {
+        borderColor: 'gray',
+        height: 50,
+    },
+    buttonSend:{
+        color: 'red'
+    },
+    textoDTN: {
+        color: 'blue',
+        height: 50,
+        marginTop: 10,
+        marginBottom: 10,
+    }
+})
 
 
 AppRegistry.registerComponent('SocialDisasters', () => SocialDisasters);
