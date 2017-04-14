@@ -33,13 +33,12 @@ public class DTNService  extends DTNIntentService{
 	public static final String ACTION_RECV_MESSAGE = "com.socialdisasters.RECV_MESSAGE";
 
 
-	private static final String ACTION_MARK_DELIVERED = "de.tubs.ibr.dtn.example.DELIVERED";
-	private static final String EXTRA_BUNDLEID = "de.tubs.ibr.dtn.example.BUNDLEID";
+	private static final String ACTION_MARK_DELIVERED = "com.socialdisasters.DELIVERED";
+	private static final String EXTRA_BUNDLEID = "com.socialdisasters.BUNDLEID";
 
-	public static final String EXTRA_SOURCE = "de.tubs.ibr.dtn.example.SOURCE";
-	public static final String EXTRA_DESTINATION = "de.tubs.ibr.dtn.example.DESTINATION";
-	public static final String EXTRA_PAYLOAD = "de.tubs.ibr.dtn.example.PAYLOAD";
-	public static final GroupEndpoint PRESENCE_GROUP = new GroupEndpoint("dtn://socialdisasters.dtn/presence");
+	public static final String EXTRA_SOURCE = "com.socialdisasters.SOURCE";
+	public static final String EXTRA_DESTINATION = "com.socialdisasters.DESTINATION";
+	public static final String EXTRA_PAYLOAD = "com.socialdisasters.PAYLOAD";
 
 	public DTNService() {
 		super(TAG);
@@ -95,6 +94,8 @@ public class DTNService  extends DTNIntentService{
 			Log.e(TAG,"SEND MESSAGE");
 			String idUser = intent.getStringExtra(EXTRA_USER_ID);
 			String text = intent.getStringExtra(EXTRA_TEXT_USER);
+			Log.e(TAG,"ID: " + idUser);
+			Log.e(TAG,"message: " + text);
 			actionSendMessage(idUser, text);
 		}else if(ACTION_RECV_MESSAGE.equals(action)) {
 			Log.d(TAG,"RECIEVE MESSAGE");
