@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Whisper</string>
+    <string name="app_name">SocialDisasters</string>
     <string name="desc_buddy_icon">Buddy icon</string>
     <string name="desc_send_button">Send button</string>
     <string name="desc_security_button">Security Info</string>
