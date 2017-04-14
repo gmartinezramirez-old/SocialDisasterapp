@@ -78,10 +78,11 @@ public class DTNService  extends DTNIntentService{
 			return;
 		}
 		String action = intent.getAction();
+		Log.d(TAG,">>>>> onHandleIntent" );
 		Log.d(TAG,"Action: " + action);
 
 		if (de.tubs.ibr.dtn.Intent.RECEIVE.equals(action)) {
-			Log.d(TAG,"MESSGE RECEIVE");
+			Log.d(TAG,">>>>> MESSAGE RECEIVE");
 			try {
 				//query all available bundles so it can be processed by the DataHandler
 				while (mSession.queryNext()){
@@ -120,7 +121,7 @@ public class DTNService  extends DTNIntentService{
 	private DataHandler mDataHandler = new SimpleDataHandler() {
 		@Override
 		protected void onMessage(BundleID id, byte[] data) {
-			Log.d(TAG, "Message received from " + id.getSource());
+			Log.d(TAG, ">>>> Message received from " + id.getSource());
 
 			// forward message to an activity
 			Intent mi = new Intent(ACTION_RECV_MESSAGE);
